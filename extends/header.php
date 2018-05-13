@@ -1,15 +1,3 @@
-<?php 
-
-    session_start(); 
-
-    include "conexion/conexion.php"; 
-    $clase = new sistema;
-    if (!isset($_SESSION["dni"])) {
-        header("location: login.php");
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,11 +12,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
     <title>CECIN UNDAC</title>
     <!-- Bootstrap Core CSS -->
-    <link href="static/assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="../DataTables/datatables.css"> -->
+
+    <link href="../static/assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="static/css/style.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="static/css/colors/default.css" id="theme" rel="stylesheet">
+    <link href="../static/css/colors/default.css" id="theme" rel="stylesheet">
+
+ 
+    
+
 
 
 </head>
@@ -60,16 +54,16 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="static/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../static/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="static/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="../static/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="static/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <img src="../static/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
-                         <img src="static/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                         <img src="../static/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -97,7 +91,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="static/assets/images/users/1.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION['full_name']; ?> &nbsp;</span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../static/assets/images/users/3.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION['full_name']; ?> &nbsp;</span> </a>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +124,7 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Lista de Usuario</span></a>
                             <ul>
-                                <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-spin fa-cog"></i><span class="hide-menu"> Listar Usuarios</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../user/index.php" aria-expanded="false"><i class="fa fa-spin fa-cog"></i><span class="hide-menu"> Listar Usuarios</span></a></li>
                                 <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo Usuario</span></a></li>
                             </ul>
                         </li>
