@@ -91,8 +91,13 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../static/assets/images/users/3.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION['full_name']; ?> &nbsp;</span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../static/assets/images/users/3.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION['full_name']; ?> &nbsp;</span> </a>
                         </li>
+                        <ul class="navbar-nav my-lg-0">
+                            <li class="nav-item dropdown u-pro">
+                            <a href="../destroy.php" class="nav-link dropdown-toggle waves-effect waves-dark profile-pic"><span>Cerrar Sesion</span></a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
             </nav>
