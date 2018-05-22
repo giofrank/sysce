@@ -34,3 +34,25 @@
 </body>
 
 </html>
+
+<script>
+    
+    // $(document).ready(function() {
+    //     $("#form_1").submit(function(e) {
+    //         e.preventDefault();
+    //         var key = $("#search_person").val();
+    //         if (key != 0) {
+    //             var data = {key:key};
+
+    //             $.ajax({
+    //                 url: "",
+    //                 type:'POST',
+    //                 data:data,
+    //                 success: function (data){
+    //                     $("#load_list").html(data);
+    //                 }
+    //             })
+    //         }
+    // });
+    // });
+</script>

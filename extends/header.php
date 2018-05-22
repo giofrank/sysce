@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/images/favicon-cecin.png">
     <title>CECIN UNDAC</title>
     <!-- Bootstrap Core CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="../DataTables/datatables.css"> -->
@@ -54,14 +54,14 @@
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../static/assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../static/assets/images/logo-cecin.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
                             <img src="../static/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="../static/assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <img src="../static/assets/images/logo-texto-cecin.png" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
                          <img src="../static/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
@@ -79,8 +79,9 @@
                         <!-- Search -->
                         <!-- ============================================================== -->
                         <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="fa fa-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Pulse enter para buscar ..."> <a class="srh-btn"><i class="fa fa-times"></i></a> </form>
+                            <form class="app-search" id="form_1" method="GET" action="/sysce/home/list.php">
+                                <input name="id" id="search_person" type="text" class="form-control" placeholder="Digite un DNI ..."> <a href="#" class="srh-btn"><i class="fa fa-times"></i></a> 
+                            </form>
                         </li>
                     </ul>
                     <!-- ============================================================== -->
@@ -91,7 +92,7 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../static/assets/images/users/3.jpg" alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION['full_name']; ?> &nbsp;</span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src='../static/assets/images/users/<?php echo $retVal = ($_SESSION['sexo']=='M') ? "3.jpg" : "8.jpg" ; ?>' alt="user" class="" /> <span class="hidden-md-down"><?php echo $_SESSION['full_name']; ?> &nbsp;</span> </a>
                         </li>
                         <ul class="navbar-nav my-lg-0">
                             <li class="nav-item dropdown u-pro">
@@ -116,24 +117,27 @@
                 <?php if ($_SESSION['rol'] == 1) { ?>
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
-                        <ul><li>mm</li></ul>
+                        <li> <a class="waves-effect waves-dark" href="/sysce/home/" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Profile</span></a>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Perfil</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Tables</span></a>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Notas</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="icon-fontawesome.html" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">Icons</span></a>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-id-badge"></i><span class="hide-menu">Alumnos</span></a>
+                            <ul>
+                                <li><a class="waves-effect waves-dark" href="../student/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Alumnos </span></a></li>
+                                <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo alumno</span></a></li>
+                            </ul>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="fa fa-globe"></i><span class="hide-menu">Map</span></a>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Cursos</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Lista de Usuario</span></a>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Lista de Usuario</span></a>
                             <ul>
                                 <li><a class="waves-effect waves-dark" href="../user/index.php" aria-expanded="false"><i class="fa fa-spin fa-cog"></i><span class="hide-menu"> Listar Usuarios</span></a></li>
                                 <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo Usuario</span></a></li>
                             </ul>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="pages-error-404.html" aria-expanded="false"><i class="fa fa-question-circle"></i><span class="hide-menu">404</span></a>
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa  fa-suitcase"></i><span class="hide-menu">Docente</span></a>
                         </li>
                     </ul>
                 </nav>

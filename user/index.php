@@ -38,7 +38,12 @@
                 <!-- ============================================================== -->
 
                 <?php 
+                    $clase->conexion();
 
+                    $query = mysql_query("SELECT * FROM USUARIO 
+                                            INNER JOIN PERSONA ON USUARIO.id_persona=PERSONA.id_persona
+                                            INNER JOIN ROL ON ROL.id_rol = USUARIO.id_rol
+                                            WHERE USUARIO.state='A';");
 
                  ?>    
 
@@ -59,168 +64,29 @@
                                                 <th>Opciones</th>
                                             </tr>
                                         </thead>
+                                        
+                                        <?php if(mysql_num_rows($query)>0){ ?>
                                         <tbody>
+                                            <?php 
+                                            $i=0;
+                                            while($row = mysql_fetch_array($query)){ ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>Deshmukh</td>
-                                                <td>Prohaska</td>
-                                                <td>@Genelia</td>
+                                                <td><?php echo $i=$i+1; ?></td>
+                                                <td><?php echo $row['a_paterno']." ".$row['a_materno'].", ".$row['nombres'];?></td>
+                                                <td><?php echo $row['user'] ?></td>
+                                                <td><?php echo $row['nombre'] ?></td>
                                                 <td>
                                                     <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
                                                     <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Deshmukh</td>
-                                                <td>Gaylord</td>
-                                                <td>@Ritesh</td>
-                                                <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
-                                                </td>
-                                            </tr>
-
+                                            <?php } ?>
+                                        <?php }else{ ?> 
+                                        
+                                            <div class="alert alert-warning" role="alert">
+                                              <strong>Alerta!</strong> No se encontraron registros en la Base de datos.
+                                          </div> 
+                                        <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
