@@ -10,8 +10,8 @@
 
     $clase->conexion();
     header('Content-Type: text/html; charset=iso-8859-1'); 
-     $key = base64_decode($_REQUEST['k']);
-     $keys = base64_decode($_REQUEST['ka']);
+    $key = base64_decode($_REQUEST['k']);
+    $keys = base64_decode($_REQUEST['ka']);
 
 ?>
 

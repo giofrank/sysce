@@ -122,6 +122,9 @@
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-user-circle-o"></i><span class="hide-menu">Perfil</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Notas</span></a>
+                            <ul>
+                                <li><a class="waves-effect waves-dark" href="../notes/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Notas </span></a></li>
+                            </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-id-badge"></i><span class="hide-menu">Alumnos</span></a>
                             <ul>
@@ -142,6 +145,18 @@
                     </ul>
                 </nav>
                 <?php  } ?>
+
+                <?php if ($_SESSION['rol'] == 2): ?>
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav">
+                            <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Notas</span></a>
+                                <ul>
+                                    <li><a class="waves-effect waves-dark" href="../notes/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Notas </span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                <?php endif ?>
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->
