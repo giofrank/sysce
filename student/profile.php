@@ -13,6 +13,8 @@
     $key = base64_decode($_REQUEST['k']);
     $keys = base64_decode($_REQUEST['ka']);
 
+
+
 ?>
 
 <!-- =================================HEADER================ -->
@@ -39,12 +41,11 @@
 <?php 
 if (isset($key)) { ?>
 
-
         <?php 
 
 
             $query = mysql_query("SELECT * FROM PERSONA 
-                                    INNER JOIN ALUMNO ON PERSONA.id_persona = ALUMNO.id_alumno
+                                    INNER JOIN ALUMNO ON PERSONA.id_persona = ALUMNO.id_person
                                     WHERE PERSONA.id_persona = '$key' ");
 
             $row = mysql_fetch_array($query); 

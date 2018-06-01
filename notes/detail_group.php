@@ -88,11 +88,11 @@
                                                     <input type="number" value="<?php echo $array['n2'] ?>" class="form-control input-sm note_2">
                                                 </td>
                                                 <td>
-                                                    <input type="number" style="border-color: #80fff9;" value="<?php echo $array['pf'] ?>" class="form-control input-sm note_f">
+                                                    <input type="number" style="border-color: #80fff9;" value="<?php echo $array['pf'] ?>" class="form-control input-sm note_f" readonly>
                                                 </td>
                                                 <td>
 
-                                                    <a href="#" class="btn btn-success save_note" pa="<?php echo $array['id_alumno']?>" pg="<?php echo $array['id_grupo'] ?>" onclick="saveNotas(this)"> Guardar</a>
+                                                    <a href="#" class="btn btn-success save_note" pa="<?php echo $array['id_alumno']?>" pg="<?php echo $array['id_grupo'] ?>" onclick="saveNotas(this,event)"> Guardar</a>
                                                 </td>
                                             </tr>
                                         <?php } ?>
@@ -132,14 +132,22 @@
 
     } );
 
-    function saveNotas(scope){
+    function saveNotas(scope,e){
+        e.preventDefault();
         var pg=$(scope).attr('pg');
         var pa=$(scope).attr('pa');
         var n1 = $(scope).parent().parent().find(".note_1").val();
         var n2 = $(scope).parent().parent().find(".note_2").val();
-        var n3 = $(scope).parent().parent().find(".note_f").val();
+
         if (!n1){n1=0}
         if (!n2){n2=0}
+
+        var re = ((parseInt(n1)+parseInt(n2))/2)
+
+        $(scope).parent().parent().find(".note_f").val(Math.round(re));
+
+        var n3 = $(scope).parent().parent().find(".note_f").val();
+
         if (!n3){n3=0}
 
         data_edit={

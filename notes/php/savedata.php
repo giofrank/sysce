@@ -22,7 +22,7 @@
         // update
         $arraynotas = mysql_fetch_array($bd_query);
         $pknote= $arraynotas['id_nota'];
-        mysql_query("UPDATE NOTA SET nota1=$n1, nota2=$n2, promedio=$pf
+        mysql_query("UPDATE NOTA SET nota1='$n1', nota2='$n2', promedio='$pf'
                                 WHERE NOTA.id_nota = '$pknote'
             ");
 

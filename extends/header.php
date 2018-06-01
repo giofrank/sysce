@@ -129,10 +129,17 @@
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-id-badge"></i><span class="hide-menu">Alumnos</span></a>
                             <ul>
                                 <li><a class="waves-effect waves-dark" href="../student/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Alumnos </span></a></li>
-                                <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo alumno</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../student/new.php" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo alumno</span></a></li>
                             </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Cursos</span></a>
+                        </li>
+                        
+                        <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-address-book-o"></i><span class="hide-menu">Grupos</span></a>
+                            <ul>
+                                <li><a class="waves-effect waves-dark" href="../group/index.php" aria-expanded="false"><i class="fa fa-spin fa-cog"></i><span class="hide-menu"> Listar Grupos</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../group/new.php?tipo_group=1" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo Grupo</span></a></li>
+                            </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Lista de Usuario</span></a>
                             <ul>
