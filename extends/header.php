@@ -123,31 +123,41 @@
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Notas</span></a>
                             <ul>
-                                <li><a class="waves-effect waves-dark" href="../notes/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Notas </span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../notes/index.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Notas </span></a></li>
                             </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-id-badge"></i><span class="hide-menu">Alumnos</span></a>
                             <ul>
-                                <li><a class="waves-effect waves-dark" href="../student/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Alumnos </span></a></li>
-                                <li><a class="waves-effect waves-dark" href="../student/new.php" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo alumno</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../student/index.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Alumnos </span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../student/new.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo alumno</span></a></li>
                             </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-book"></i><span class="hide-menu">Cursos</span></a>
+                            <ul>
+                                <li><a class="waves-effect waves-dark" href="../course/list_course.php" aria-expanded="false"><i class="fa fa-hashtag "></i><span class="hide-menu"> Listar cursos</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../course/form_course.php?tipo_course=1" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo curso</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../speciality/list_esp.php" aria-expanded="false"><i class="fa fa-hashtag "></i><span class="hide-menu"> Listar especialidades</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../speciality/form_esp.php?tipo_es=1" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nueva especialidad</span></a></li>
+                            </ul>
                         </li>
                         
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-address-book-o"></i><span class="hide-menu">Grupos</span></a>
                             <ul>
-                                <li><a class="waves-effect waves-dark" href="../group/index.php" aria-expanded="false"><i class="fa fa-spin fa-cog"></i><span class="hide-menu"> Listar Grupos</span></a></li>
-                                <li><a class="waves-effect waves-dark" href="../group/new.php?tipo_group=1" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo Grupo</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../group/index.php" aria-expanded="false"><i class="fa fa-hashtag "></i><span class="hide-menu"> Listar Grupos</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../group/new.php?tipo_group=1" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo Grupo</span></a></li>
                             </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Lista de Usuario</span></a>
                             <ul>
-                                <li><a class="waves-effect waves-dark" href="../user/index.php" aria-expanded="false"><i class="fa fa-spin fa-cog"></i><span class="hide-menu"> Listar Usuarios</span></a></li>
-                                <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-plus-square"></i><span class="hide-menu"> Nuevo Usuario</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../user/index.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Listar Usuarios</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo Usuario</span></a></li>
                             </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa  fa-suitcase"></i><span class="hide-menu">Docente</span></a>
+                            <ul>
+                                <li><a class="waves-effect waves-dark" href="../teacher/list.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Lista </span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../teacher/form_dc.php?tipo_dc=1" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo docente</span></a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -158,7 +168,7 @@
                         <ul id="sidebarnav">
                             <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-table"></i><span class="hide-menu">Notas</span></a>
                                 <ul>
-                                    <li><a class="waves-effect waves-dark" href="../notes/index.php" aria-expanded="false"><i class="fa  fa-ellipsis-h"></i><span class="hide-menu"> Notas </span></a></li>
+                                    <li><a class="waves-effect waves-dark" href="../notes/index.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Notas </span></a></li>
                                 </ul>
                             </li>
                         </ul>

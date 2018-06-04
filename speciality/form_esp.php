@@ -1,0 +1,120 @@
+<?php 
+    header('Content-Type: text/html; charset=iso-8859-1'); 
+    session_start(); 
+
+    include "../conexion/conexion.php"; 
+    $clase = new sistema;
+    if (!isset($_SESSION["dni"])) {
+        header("location: ../login.php");
+    }
+
+?>
+
+<?php 
+    $clase->conexion();
+
+    $param = $_REQUEST['tipo_es']; 
+    
+    if ($param == 1) {
+        $nombre="";
+        $descripcion="";
+        $state="";
+
+    }elseif ($param == 2) {
+
+        $key=$_REQUEST['key'];
+
+
+        $query_gp = mysql_query("SELECT ESPECIALIDAD.* FROM ESPECIALIDAD WHERE ESPECIALIDAD.id_especialidad='$key'");
+
+        $row_gp = mysql_fetch_array($query_gp);
+
+
+        $nombre=$row_gp['nombre'];
+        $descripcion=$row_gp['descripcion'];
+        $state=$row_gp['state'];
+
+
+    }
+
+?>
+<!-- =================================HEADER================ -->
+<?php include '../extends/header.php' ?>
+<!-- =================================END - HEADER================ -->
+
+<div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">Especialidad</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                            <li class="breadcrumb-item active">Formulario</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="">
+                    <form class="form-horizontal form-material" method="POST" action="php/register.php">
+                    <div class="col-lg-12 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <!-- Tab panes -->
+                            <div class="card-body">
+                                <h5 class="card-title text-success">-Datos acerca de la especilidad:</h5>
+                                <hr > <br>
+                                    <input type="hidden" name="tipo_gp" id="tipo" value="<?php echo($param)?>"/>
+                                    <?php if (isset($key)): ?>
+                                        <input type="hidden" name="id" id="id" value="<?php echo  $key; ?>"/>
+                                    <?php endif ?>
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <b>Nombre de especilaidad: </b>
+                                            <input type="text" name="nombre" placeholder="" class="form-control form-control-line" value="<?php echo $nombre; ?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-8">
+                                            <b >Descripcion:</b>
+                                            <textarea rows="3" name="descripcion" class="form-control form-control-line" ><?php echo $descripcion; ?></textarea>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <b>Estado:</b>
+                                            <select name="state"  class="form-control" required>
+                                                <option value="P" <?php if($state=="P"){echo "selected";} ?> >Pendiente</option>
+                                                <option value="A" <?php if($state=="A"){echo "selected";} ?>>Aprobado</option>
+                                                <option value="E" <?php if($state=="E"){echo "selected";} ?>>Rechazado</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success">Guardar</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    </form>
+                </div>
+
+
+
+
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+
+            </div>
+<!-- =================FOOTER================ -->
+<?php include '../extends/footer.php' ?>
+<!-- =================END - FOOTER================ -->

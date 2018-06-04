@@ -82,7 +82,7 @@
                                 <h5 class="card-title text-success">-Datos acerca del grupo:</h5>
                                 <hr > <br>
                                     <input type="hidden" name="tipo_gp" id="tipo" value="<?php echo($param)?>"/>
-                                    <?php if (condition): ?>
+                                    <?php if (isset($key)): ?>
                                         <input type="hidden" name="id" id="id" value="<?php echo  $key; ?>"/>
                                     <?php endif ?>
                                     <div class="form-group row">
