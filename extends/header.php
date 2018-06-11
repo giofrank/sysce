@@ -61,7 +61,7 @@
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="../static/assets/images/logo-texto-cecin.png" alt="homepage" class="dark-logo" />
+                         <img src="../static/assets/images/large.png" alt="homepage" class="dark-logo" />
                          <!-- Light Logo text -->    
                          <img src="../static/assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
                 </div>
