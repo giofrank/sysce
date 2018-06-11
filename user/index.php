@@ -27,7 +27,7 @@
                         </ol>
                     </div>
                     <div class="col-md-7 align-self-center">
-                        <a href="#" class="btn waves-effect waves-light btn-primary btn-circle pull-right hidden-sm-down"><i class="fa fa-plus"></i></a>
+                        <a href="new_user.php?tipo_us=1" class="btn waves-effect waves-light btn-primary btn-circle pull-right hidden-sm-down"><i class="fa fa-plus"></i></a>
                     </div>
                 </div>
                 <!-- ============================================================== -->
@@ -76,8 +76,8 @@
                                                 <td><?php echo $row['user'] ?></td>
                                                 <td><?php echo $row['nombre'] ?></td>
                                                 <td>
-                                                    <a href="#" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
-                                                    <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a>
+                                                    <a href="new_user.php?tipo_us=2&dni=<?php echo $row['id_usuario'];?>" class="btn btn-warning btn-circle btn-sm"><i class="fa fa-pencil"></i></a>
+                                                    <!-- <a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fa  fa-trash-o"></i></a> -->
                                                 </td>
                                             </tr>
                                             <?php } ?>

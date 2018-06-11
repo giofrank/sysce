@@ -150,7 +150,7 @@
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-bookmark-o"></i><span class="hide-menu">Lista de Usuario</span></a>
                             <ul>
                                 <li><a class="waves-effect waves-dark" href="../user/index.php" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Listar Usuarios</span></a></li>
-                                <li><a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo Usuario</span></a></li>
+                                <li><a class="waves-effect waves-dark" href="../user/new_user.php?tipo_us=1" aria-expanded="false"><i class="fa fa-hashtag"></i><span class="hide-menu"> Nuevo Usuario</span></a></li>
                             </ul>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa  fa-suitcase"></i><span class="hide-menu">Docente</span></a>
