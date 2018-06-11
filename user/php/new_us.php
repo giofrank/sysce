@@ -17,17 +17,23 @@
 
         # new
         $query_per = mysql_query("SELECT * FROM PERSONA WHERE PERSONA.dni='$dni'");
-        $row_ps = mysql_fetch_array($query_per);
-        $id_persona = $row_ps['id_persona'];
+
+        if(mysql_num_rows($query_per)>0){ 
+            $row_ps = mysql_fetch_array($query_per);
+            $id_persona = $row_ps['id_persona'];
 
 
-        mysql_query("INSERT INTO USUARIO ( user, password, state,id_rol, id_persona ) VALUES('$dni','$pass2', '$state', '$id_rol','$id_persona')");
+            mysql_query("INSERT INTO USUARIO ( user, password, state,id_rol, id_persona ) VALUES('$dni','$pass2', '$state', '$id_rol','$id_persona')");
 
-        $pkt=mysql_insert_id();
+            $pkt=mysql_insert_id();
 
-            if (isset($pkt)) {
-                echo "<script> window.location='../index.php'; </script>";
-            }
+                if (isset($pkt)) {
+                    echo "<script> window.location='../index.php'; </script>";
+                }
+        }else{
+            echo '<script language="javascript">alert("Cree persona");</script>';
+            echo "<script> window.location='/sysce/person/new_person.php?dni=".$dni."'; </script>";
+        }
     }elseif ($tipo == 2) {
         # update
         $id  = $_POST['id'];

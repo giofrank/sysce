@@ -72,15 +72,15 @@
                                         <b>DNI:</b>
                                         <input type="number" name="dni" placeholder="Ingrese DNI" class="form-control form-control-line" value="<?php echo $dni; ?>" <?php if ($dni!="") {
                                             echo "readonly";
-                                        } ?>>
+                                        } ?> required>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Contraseña:</b>
-                                        <input type="password" name="pass1" class="form-control form-control-line" autocomplete="off" >
+                                        <input type="password" name="pass1" class="form-control form-control-line" autocomplete="off" required>
                                     </div>
                                     <div class="col-md-3">
                                         <b>Repita la contraseña:</b>
-                                        <input type="password" name="pass2"  class="form-control form-control-line" autocomplete="new-password">
+                                        <input type="password" name="pass2"  class="form-control form-control-line" autocomplete="new-password" required>
                                     </div>
                                     <?php 
 
